@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class='w-full lg:w-[740px] mx-auto py-44'>
+			<h1 class='text-5xl font-bold flex flex-row gap-x-4 pb-4'>
+				Hola, soy Alina. <a href='https://www.linkedin.com/in/alina-bernardez/' target="_blank" class='flex justify-center items-center'>
+					<Badge>This is a Badge</Badge>
+				</a href='https://linkedin.com/alinabernardez'>
+			</h1>
+			<h2 class='text-2xl placeholder-opacity-80 text-wrap'>
+				<span class='text-yellow-200/90'>Full-stack developer,</span> afincada en España.<br>
+			Te ecuentras en el sitio idóneo si quieres ver alguno de mis proyectos, contactarme o descargar mi CV.
+			</h2>
+			<ul>
+				<li><a href='https://www.linkedin.com/in/alina-bernardez/'><Linkedin/></a></li>
+			</ul>
+		</section>
+	</main>
+</Layout>
+
