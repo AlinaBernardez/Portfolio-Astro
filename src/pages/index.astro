@@ -2,23 +2,56 @@
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
 import Linkedin from '../components/icons/Linkedin.astro';
+import Github from '../components/icons/Github.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Gmail from '../components/icons/Gmail.astro';
+import Timeline from '../components/Timeline.astro';
+import Calendar from '../components/icons/Calendar.astro';
+import Computer from '../components/icons/Computer.astro';
+import Projects from '../components/Projects.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class='w-full lg:w-[740px] mx-auto py-44'>
-			<h1 class='text-5xl font-bold flex flex-row gap-x-4 pb-4'>
+<Layout title='Portfolio de Alina' description='Desarrolladora y programadora'>
+	<main class="px-4">
+		<section id="top" class='w-full lg:w-[740px] mx-auto py-44 pb-18'>
+			<h1 class='text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10'>
 				Hola, soy Alina. <a href='https://www.linkedin.com/in/alina-bernardez/' target="_blank" class='flex justify-center items-center'>
 					<Badge>This is a Badge</Badge>
-				</a href='https://linkedin.com/alinabernardez'>
+				</a href='https://www.linkedin.com/in/alina-bernardez/'>
 			</h1>
-			<h2 class='text-2xl placeholder-opacity-80 text-wrap'>
-				<span class='text-yellow-200/90'>Full-stack developer,</span> afincada en España.<br>
+			<h2 class='text-xl lg:text-2xl placeholder-opacity-80 text-wrap max-w-[700px]'>
+				<span class='text-yellow-200/90'>Full Stack developer,</span> afincada en España.<br>
 			Te ecuentras en el sitio idóneo si quieres ver alguno de mis proyectos, contactarme o descargar mi CV.
 			</h2>
-			<ul>
-				<li><a href='https://www.linkedin.com/in/alina-bernardez/'><Linkedin/></a></li>
-			</ul>
+			<nav class="flex gap-4 mt-6 flex-wrap">
+				<SocialLinks href='https://www.linkedin.com/in/alina-bernardez/'>
+					<Linkedin  class='size-4 md:size-5' />
+					<p class="text-xs">LinkedIn</p>
+				</SocialLinks>
+				<SocialLinks href='https://github.com/AlinaBernardez'>
+					<Github  class='size-4 md:size-5' />
+					<p class="text-xs">Github</p>
+				</SocialLinks>
+				<SocialLinks href='mailto:bernardezalina@gmail.com'>
+					<Gmail  class='size-4 md:size-5' />
+					<p class="text-xs">Send mail</p>
+				</SocialLinks>
+			</nav>
+			
+		</section>
+		<section id="experience" class='w-full lg:w-[740px] mx-auto pb-20'>
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<Calendar />
+				Experiencia
+			</h2>
+			<Timeline />
+		</section>
+		<section id="projects" class='w-full lg:w-[740px] mx-auto'>
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<Computer />
+				Proyectos
+			</h2>
+			<Projects />
 		</section>
 	</main>
 </Layout>

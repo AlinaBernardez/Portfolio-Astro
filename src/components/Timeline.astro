@@ -1,0 +1,37 @@
+---
+import TimelineItem from "./TimelineItem.astro"
+
+const experience = [
+    {
+        date: 'Septiembre 2023 - Actualidad',
+        company: 'Hyarks',
+        title: 'Full Stack Developer',
+        description: 'Front End development and design for a Company that works in the Renewable Energy Industry.',
+        stack: 'Figma, React, JavaScript, Axios, Node.js, Express, MongoDB',
+        link: 'http://www.hyarks.com'
+    },
+    {
+        date: 'Septiembre 2023 - Actualidad',
+        company: 'Tiltit',
+        title: 'Product Owner',
+        description: 'Full Stack development of an App that carries out a digital inclining test process for boats, through an inclinometer connected via Bluetooth.',
+        stack: 'Figma, React Native, Expo, JavaScript, Axios, Node.js, Express, MongoDB, Shopify',
+    },
+    {
+        date: 'Mayo 2023 - Julio 2023',
+        company: 'Moodboard Lady',
+        title: 'Web page developer.',
+        description: 'Web page development, page functionalities and design and domain and hosting purchase.',
+        stack: 'Wordpress'
+    }
+]
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">
+    <li class="mb-10 ms-4">
+        {experience.map(exp => (
+            <TimelineItem {...exp} />
+        ))}
+    </li>
+</ol>
