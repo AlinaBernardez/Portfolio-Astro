@@ -2,51 +2,81 @@
 import React from '../components/icons/React.astro'
 import Html from '../components/icons/Html.astro'
 import CSS from '../components/icons/CSS.astro'
+import AstroIcon from './icons/AstroIcon.astro'
+import Tailwind from './icons/Tailwind.astro'
+import JavaScript from './icons/JavaScript.astro'
+import NodeIcon from './icons/NodeIcon.astro'
+import Mongo from './icons/Mongo.astro'
 
 
 const tags = {
     REACT: {
         name: 'React',
-        class: 'bg-black text-white',
+        class: 'bg-white/20 text-white',
         icon: React
     },
     HTML: {
         name: 'HTML',
-        class: 'bg-black text-white',
+        class: 'bg-white/20 text-white',
         icon: Html
     },
     CSS: {
         name: 'CSS',
-        class: 'bg-black text-white',
+        class: 'bg-white/20 text-white',
         icon: CSS
+    },
+    JAVASCRIPT: {
+        name: 'JavaScript',
+        class: 'bg-white/20 text-white',
+        icon: JavaScript
+    },
+    ASTRO: {
+        name: 'Astro',
+        class: 'bg-white/20 text-white',
+        icon: AstroIcon
+    },
+    TAILWIND: {
+        name: 'Tailwind',
+        class: 'bg-white/20 text-white',
+        icon: Tailwind
+    },
+    NODE: {
+        name: 'Node',
+        class: 'bg-white/20 text-white',
+        icon: NodeIcon
+    },
+    MONGO: {
+        name: 'Mongo',
+        class: 'bg-white/20 text-white',
+        icon: Mongo
     }
 }
 
 const projects = [
     {
-        title: 'Project',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        title: 'Portfolio',
+        description: 'Este portfolio es una SPA creada con Astro, JavaScript y Tailwind. Deploy con Netlify Drop.',
         link: '#',
-        github: '#',
+        github: 'https://github.com/AlinaBernardez/Portfolio-Astro',
         image: 'https://via.placeholder.com/300x200',
-        tags: [tags.HTML, tags.CSS, tags.REACT]
+        tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.ASTRO, tags.TAILWIND]
     },
     {
-        title: 'Project',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        title: 'E-commerce web',
+        description: 'Proyecto full stack para una tienda online creada con React, JavaScript y Node.js. Login y autenticación con Firebase para administrador y cliente, creación/eliminación de artículos y conexión con base de datos MongoDB y Mongoose. Deploy con Railway.',
         link: '#',
-        github: '#',
+        github: 'https://github.com/AlinaBernardez/backend-project-break',
         image: 'https://via.placeholder.com/300x200',
-        tags: [tags.HTML, tags.REACT]
+        tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.REACT, tags.NODE, tags.MONGO]
     },
     {
-        title: 'Project',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        title: 'Dashboard',
+        description: 'Proyecto front end para diseñar y crear un Dashboard de administrador con React, con diferentes funcionalidades: API de pronóstico de tiempo, reloj digital, nube de tags con Local Storage y creador de contraseñas seguras.',
         link: '#',
-        github: '#',
+        github: 'https://github.com/AlinaBernardez/Dashboard',
         image: 'https://via.placeholder.com/300x200',
-        tags: [tags.HTML, tags.REACT]
-    },
+        tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.REACT]
+    }
 ]
 
 ---
