@@ -63,7 +63,7 @@ const projects = [
     },
     {
         title: 'E-commerce web',
-        description: 'Proyecto full stack para una tienda online creada con React, JavaScript y Node.js. Login y autenticación con Firebase para administrador y cliente, creación/eliminación de artículos y conexión con base de datos MongoDB y Mongoose. Deploy con Railway.',
+        description: 'Proyecto full stack para una tienda online creada con React, JavaScript y Node.js. Login y autenticación con Firebase para administrador y cliente, creación/eliminación de artículos y conexión con base de datos MongoDB y mongoose. Deploy con Railway.',
         link: '#',
         github: 'https://github.com/AlinaBernardez/backend-project-break',
         image: 'https://via.placeholder.com/300x200',
@@ -71,7 +71,7 @@ const projects = [
     },
     {
         title: 'Dashboard',
-        description: 'Proyecto front end para diseñar y crear un Dashboard de administrador con React, con diferentes funcionalidades: API de pronóstico de tiempo, reloj digital, nube de tags con Local Storage y creador de contraseñas seguras.',
+        description: 'Proyecto front end para diseñar y crear un Dashboard de administrador con React, con diferentes funcionalidades: API de pronóstico de tiempo, reloj digital, nube de tags con Local Storage y creador de contraseñas seguras. Deploy con GitHub pages.',
         link: '#',
         github: 'https://github.com/AlinaBernardez/Dashboard',
         image: 'https://via.placeholder.com/300x200',
@@ -82,19 +82,21 @@ const projects = [
 ---
 
 {projects.map(({ title, description, tags, image }) => (
-    <article class="pb-8">
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-3 pb-5">
-            {tags.map(tag => (
-                <li>
-                    <span class={`flex items-center gap-1 rounded-full text-xs ${tag.class} py-1 px-3`}>
-                        <tag.icon class="size-4"/>
-                        {tag.name}
-                    </span>
-                </li>
-            ))}
-        </ul>
-        <img class="rounded shadow-2xl shadow-white/10" src={image} alt="iagen del proyecto"/>
+    <article class="flex justify-between items-center gap-4 pb-8 w-[900px]">
+        <div class="flex flex-col justify-start items-start">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-3 pb-5">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex items-center gap-1 rounded-full text-xs ${tag.class} py-1 px-3`}>
+                            <tag.icon class="size-4"/>
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <img class="rounded shadow-2xl shadow-white/10 w-[300px] h-[200px]" src={image} alt="iagen del proyecto"/>
     </article>
 ))}
