@@ -58,7 +58,7 @@ const projects = [
         description: 'Este portfolio es una SPA creada con Astro, JavaScript y Tailwind. Deploy con Netlify Drop.',
         link: '#',
         github: 'https://github.com/AlinaBernardez/Portfolio-Astro',
-        image: 'https://via.placeholder.com/300x200',
+        image: '/projects/portfo.jpg',
         tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.ASTRO, tags.TAILWIND]
     },
     {
@@ -66,15 +66,15 @@ const projects = [
         description: 'Proyecto full stack para una tienda online creada con React, JavaScript y Node.js. Login y autenticación con Firebase para administrador y cliente, creación/eliminación de artículos y conexión con base de datos MongoDB y mongoose. Deploy con Railway.',
         link: '#',
         github: 'https://github.com/AlinaBernardez/backend-project-break',
-        image: 'https://via.placeholder.com/300x200',
+        image: '/projects/ecom.jpg',
         tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.REACT, tags.NODE, tags.MONGO]
     },
     {
         title: 'Dashboard',
         description: 'Proyecto front end para diseñar y crear un Dashboard de administrador con React, con diferentes funcionalidades: API de pronóstico de tiempo, reloj digital, nube de tags con Local Storage y creador de contraseñas seguras. Deploy con GitHub pages.',
-        link: '#',
+        link: 'https://alinabernardez.github.io/Dashboard/',
         github: 'https://github.com/AlinaBernardez/Dashboard',
-        image: 'https://via.placeholder.com/300x200',
+        image: '/projects/dash.jpg',
         tags: [tags.HTML, tags.CSS, tags.JAVASCRIPT, tags.REACT]
     }
 ]
@@ -82,7 +82,7 @@ const projects = [
 ---
 
 {projects.map(({ title, description, tags, image }) => (
-    <article class="flex justify-between items-center gap-4 pb-8 w-[900px]">
+    <article class="flex justify-between items-center gap-8 pb-14 w-[900px]">
         <div class="flex flex-col justify-start items-start">
             <h3 class="text-2xl font-semibold text-blue-300 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -100,3 +100,5 @@ const projects = [
         <img class="rounded shadow-2xl shadow-white/10 w-[300px] h-[200px]" src={image} alt="iagen del proyecto"/>
     </article>
 ))}
+
+
