@@ -41,7 +41,7 @@ const tags = {
         icon: Tailwind
     },
     NODE: {
-        name: 'Node',
+        name: 'Node.js',
         class: 'bg-white/20 text-white',
         icon: NodeIcon
     },
@@ -81,10 +81,10 @@ const projects = [
 
 ---
 
-{projects.map(({ title, description, tags, image }) => (
+{projects.map(({ title, description, tags, image, github }) => (
     <article class="flex justify-between items-center gap-8 pb-14 w-[900px]">
         <div class="flex flex-col justify-start items-start">
-            <h3 class="text-2xl font-semibold text-blue-300 mb-2">{title}</h3>
+            <a href={github} target="_blank"><h3 class="text-2xl font-semibold text-blue-300 mb-2">{title}</h3></a>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-3 pb-5">
                 {tags.map(tag => (

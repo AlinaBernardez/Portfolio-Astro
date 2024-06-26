@@ -10,20 +10,23 @@ import Calendar from '../components/icons/Calendar.astro';
 import Computer from '../components/icons/Computer.astro';
 import Projects from '../components/Projects.astro';
 import About from '../components/icons/About.astro';
+import Contact from '../components/Contact.astro';
+import Message from '../components/icons/Message.astro';
 ---
 
 <Layout title='Portfolio de Alina' description='Desarrolladora y programadora'>
 	<main class="px-4">
 		<section id="top" class='flex justify-center items-center w-full lg:w-[740px] mx-auto py-[200px] h-[100vh]'>
 			<div>
-				<h1 class='text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10'>
+				<h1 class='text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row items-start gap-x-4 pb-6 lg:pb-10'>
 					Hola, soy Alina. <a href='/public/AlinaBernardez.pdf' download="AlinaBernardezCV.pdf" class='flex justify-center items-center'>
 						<Badge>Descargar CV</Badge>
 					</a >
 				</h1>
 				<h2 class='text-xl lg:text-2xl placeholder-opacity-80 text-wrap max-w-[700px]'>
-					<span class='text-blue-300'>Full Stack developer,</span> afincada en España.<br>
-				Te ecuentras en el sitio idóneo si quieres ver alguno de mis proyectos, contactarme o descargar mi CV.
+					<span class='text-blue-300 text-3xl'>Full Stack developer,</span> afincada en España.<br>
+				Te ecuentras en el sitio idóneo si quieres ver alguno de mis proyectos o descargar mi CV.<br>
+				Puedes contactarme en <span class='text-xl font-extralight underline text-blue-300'>castellano, alemán o inglés.</span>
 				</h2>
 				<nav class="flex gap-4 mt-10 flex-wrap">
 					<SocialLinks href='https://www.linkedin.com/in/alina-bernardez/'>
@@ -54,13 +57,14 @@ import About from '../components/icons/About.astro';
 				About
 			</h2>
 			<p class="text-xl text-pretty mb-8">
-				Mi inquietud me puso en contacto con el mundo de la programación de forma casual, pero en cuanto empecé a estudiar tuve claro que era a lo que me quería dedicar...y lo conseguí.<br>
+				Mi inquietud me puso en contacto con el mundo de la <span class='text-blue-300'>programación</span class='text-blue-300'> de forma casual, pero en cuanto empecé a estudiar tuve claro que era a lo que me quería dedicar...y lo conseguí.<br>
 				Programo con <span class='text-blue-300'>JavaScript</span class='text-blue-300'> principalmente, haciendo uso de diferentes librerías y frameworks, según las exigencias del proyecto.<br>
 				Procuro trabajar siempre con código claro, organizado y mantenible.
 			</p>
+			<p class="text-lg text-pretty">Nací en Alemania en 1989, pero terminé mis estudios universitarios en Alicante, donde vivo desde hace más de 20 años.</p>
 			<p class="text-lg text-pretty">
-				Soy una persona a la que le encantan los <span class='text-blue-300'>retos</span> y aprender cosas nuevas todos los días es uno de ellos. Resolver problemas/bugs es una de mis especialidades.
-				</p>
+				Soy una persona a la que le encantan los <span class='text-blue-300'>retos,</span> y aprender cosas nuevas todos los días es uno de ellos. Resolver problemas/bugs es una de mis especialidades.
+			</p>
 		</section>
 		<section id="projects" class='w-full lg:w-[740px] mx-auto'>
 			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
@@ -69,10 +73,12 @@ import About from '../components/icons/About.astro';
 			</h2>
 			<Projects />
 		</section>
-		<section id="contact" class='flex justify-center items-center w-full lg:w-[740px] mx-auto py-[200px] h-[100vh]'>
-			<div>
-				Contact form
-			</div>
+		<section id="contact" class='flex flex-col items-start w-full lg:w-[740px] mx-auto py-[200px] h-[100vh]'>
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<Message />
+				Contacto
+			</h2>
+			<Contact />
 		</section>
 	</main>
 </Layout>
